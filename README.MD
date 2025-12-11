@@ -119,4 +119,4 @@ This project involves connecting components to Mains AC Voltage (110V/220V).
 * **Do not touch** the AC transformer wiring while powered.
 * Ensure the AC transformer is isolated.
 * Clamp the CT sensor around **ONE** wire only (Live or Neutral).
-* **The author is not responsible for any damage or injury caused by this project.**
+
