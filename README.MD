@@ -90,7 +90,7 @@ Before installing, adjust the calibration values in **Arduino B Code** to match 
 // Inside setup() of Arduino B
 emon1.voltage(A0, 94.0, 1.7);  // Adjust 94.0 until Display matches Multimeter
 emon1.current(A1, 100);        // 100 for SCT-013-1V, 60.6 for SCT-013-000
-
+```
 ### 2. Viewing Data on Phone
 1. Download **"Serial Bluetooth Terminal"** on Android.
 2. Connect to **HC-05**.
