@@ -28,7 +28,7 @@ void setup() {
   LinkSerial.begin(4800);
   
   // 1. Initialize Sensors 
-  emon1.voltage(A0, 94, 1.7); 
+  emon1.voltage(A0, 88, 1.7); 
   emon1.current(A1, 100);
 
   // 2. Initialize Display
@@ -50,12 +50,12 @@ void loop() {
   emon1.calcVI(20, 2000); // 20 wavelengths, 2s timeout
   
   voltage = emon1.Vrms;
-  current = emon1.Irms;
-  power   = emon1.apparentPower;
-
+  current = emon1.Irms-1.0;
+ //power   = emon1.apparentPower;
+  power=voltage*current;
   // Filter Noise (Force zero if unplugged)
   if (voltage < 50) voltage = 0;
-  if (current < 2.2) { current = 0; power = 0; }
+  if (current < 1.2) { current = 0; power = 0; }
 
   // 2. Calculate Energy (kWh)
   // Power (W) * Time (ms) / (1000 * 3600000)
